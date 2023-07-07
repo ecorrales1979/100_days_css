@@ -1,0 +1,88 @@
+:root {
+  --shadow-init: 2px 2px 3px 2px rgba(0, 0, 0, 0.1);
+  --shadow-end: 8px 8px 12px rgba(0, 0, 0, 0.3);
+  --animation: 2s cubic-bezier(0.2, 0.97, 0.65, 1) infinite alternate;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fe4162;
+}
+
+.circle {
+  background: #fff;
+  border-radius: 50%;
+}
+
+.circle-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle1 {
+  width: 90px;
+  height: 90px;
+  animation: circle1-animation var(--animation);
+}
+
+@keyframes circle1-animation {
+  0%,
+  10% {
+    box-shadow: var(--shadow-init);
+    transform: scale(0);
+  }
+  100% {
+    box-shadow: var(--shadow-end);
+    transform: scale(1);
+  }
+}
+
+.circle2 {
+  width: 60px;
+  height: 60px;
+  animation: circle2-animation var(--animation);
+}
+
+@keyframes circle2-animation {
+  0%,
+  40% {
+    box-shadow: var(--shadow-init);
+    transform: scale(0);
+  }
+  100% {
+    box-shadow: var(--shadow-end);
+    transform: scale(1);
+  }
+}
+
+.circle3 {
+  width: 30px;
+  height: 30px;
+  animation: circle3-animation var(--animation);
+}
+
+@keyframes circle3-animation {
+  0%,
+  70% {
+    box-shadow: var(--shadow-init);
+    transform: scale(0);
+  }
+  100% {
+    box-shadow: var(--shadow-end);
+    transform: scale(1);
+  }
+}
